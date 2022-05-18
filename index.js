@@ -4,8 +4,8 @@ const home = fs.readFileSync('index.html','utf-8');
 const about = fs.readFileSync('./about.html','utf-8');
 const services = fs.readFileSync('./services.html','utf-8');
 const contact = fs.readFileSync('./contact.html','utf-8');
-const hostname = 'localhost';
-const portname = 8080;
+const hostname = '159.223.224.249';
+const portname = process.env.PORT || 3000;
 
 // var file = fs.readFileSync('index.html', 'utf-8');
 const  server = http.createServer(function(req, res){
