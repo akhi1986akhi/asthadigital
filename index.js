@@ -7,11 +7,12 @@ const about = fs.readFileSync('./about.html','utf-8');
 const services = fs.readFileSync('./services.html','utf-8');
 const contact = fs.readFileSync('./contact.html','utf-8');
 const hostname = '159.223.224.249';
-const portname = process.env.PORT || 3000;
+// const hostname = '127.0.0.1';
+const portname = process.env.PORT || 80;
 
 // var file = fs.readFileSync('index.html', 'utf-8');
 app.get('/',function(req,res){
-    res.end("Hellow this is first page of digital ocean page");
+    res.end("Hello, This is first page of Digital Ocean Page");
 })
 // const  server = http.createServer(function(req, res){
 //     console.log(req.url);
