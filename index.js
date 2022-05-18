@@ -6,7 +6,7 @@ const home = fs.readFileSync('index.html','utf-8');
 const about = fs.readFileSync('./about.html','utf-8');
 const services = fs.readFileSync('./services.html','utf-8');
 const contact = fs.readFileSync('./contact.html','utf-8');
-// const hostname = '159.223.224.249';
+const hostname = '159.223.224.249';
 const portname = process.env.PORT || 3000;
 
 // var file = fs.readFileSync('index.html', 'utf-8');
@@ -41,6 +41,6 @@ app.get('/',function(req,res){
 // server.listen(portname);
 // console.log(`Server running at http://${hostname}:${portname}/`);
 
-app.listen(port,()=>{
-    console.log(`Applicatio started successfully on port ${port}`);
+app.listen(portname,()=>{
+    console.log(`Applicatio started successfully on port ${portname}`);
 });
