@@ -1,0 +1,46 @@
+/* MEDIA QUERY */
+@media (max-width:991px){
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .header-contact-no{
+        display: none;
+    }
+    .index-home{
+        height:100vh;
+    }
+    .index-home .oneTouchPoint{
+        flex-direction: column;
+    }
+    .oneTouchPoint .oneTouchPoint-img img{
+        width:300px;
+    }
+    .oneTouchPoint .oneTouchPoint-text span{
+        font-size: 1em;
+    }
+    .oneTouchPoint .oneTouchPoint-text span h2{
+        font-size: 1.5em;
+    }
+
+    .oneTouchPoint .oneTouchPoint-img{
+        margin-top: 30px;
+    }
+
+    .container-home-twohunplus{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #home-service-plus{
+        width:100%;
+    }
+    #home-service-plus span{
+    
+        font-size: 1.3em;
+    }
+    .container-home-twohunplus div img{
+        width:50px;
+        margin:10px;   
+    }
+
+}

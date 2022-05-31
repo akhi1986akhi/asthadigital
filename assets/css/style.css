@@ -1,0 +1,386 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css");
+        @import url('https://fonts.googleapis.com/css2?family=Playball&family=Roboto:wght@100;300&family=Work+Sans:wght@300&display=swap');
+        body{
+            /* background: rgb(0, 44, 48); */
+            background: linear-gradient(45deg,rgb(0,20,20)30%,rgb(0,44,44));
+            color:thistle;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* HEADER CSS */
+
+        header nav ul {
+            display: flex;
+        }
+        header nav ul li {
+            list-style: none;
+            margin-right: 10px;
+        }
+        header nav ul li a {
+            position:relative;  /* added */
+            text-decoration: none;
+            color:thistle;
+            padding: 10px 5px;
+            transition: 0.5s ease-in;
+        }
+        /* added */
+        header nav ul li a:before {
+            position:absolute;
+            content:"";
+            height:2px;
+            width:0px;
+            bottom:0px;
+            background: rgb(0, 255, 251);
+            transition: 0.5s ease-in;
+        }
+        /* added */
+        header nav ul li a:hover::before{
+            width:85%;
+            transition: 0.5s ease-in;
+        }
+
+        header nav ul li a:hover {
+            color:rgb(0, 255, 251);
+            transition: 0.5s ease-in;
+        }
+        .active{
+            color:rgb(0, 255, 251);
+            transition: 0.5s;
+        }
+        .brand-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .header-contact-no{
+            position: absolute;
+            right:20px;
+        }
+        .header-contact-no span{
+            margin-right: 10px;
+            color:thistle;
+        }
+
+/* INDEX HOME CSS */
+
+.index-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    height:90vh;
+}
+.index-home .oneTouchPoint{
+    display: flex;
+    position: relative;
+}
+.oneTouchPoint .oneTouchPoint-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+}
+.oneTouchPoint .oneTouchPoint-text span{
+    font-size: 2em;
+
+    animation: animate 1s ease-in;
+    
+}
+@keyframes animate{
+    0%{
+        transform: translateY(150%);
+        opacity: 0.1;
+    }
+    /* 80%{transform: translateY( 20%);} */
+    100%{
+        transform: translateY( 0%);
+        opacity: 1;
+    }
+    
+}
+.oneTouchPoint .oneTouchPoint-text span button{
+    padding: 0px 20px;
+    font-size: 0.8em;
+    background: rgba(1, 63, 63, 0.123);
+    outline: none;
+    color: aquamarine;
+    border:solid 0.5px aquamarine;
+    border-radius: 20px;
+    letter-spacing: 2px;
+}
+.oneTouchPoint .oneTouchPoint-text span button:hover{
+    box-shadow: rgba(127, 255, 212, 0.863) 0px 0px 2px,
+                rgba(127, 255, 212, 0.763) 0px 0px 5px,
+                rgba(127, 255, 212, 0.563) 0px 0px 10px,
+                rgba(127, 255, 212, 0.363) 0px 0px 15px,
+                rgba(127, 255, 212, 0.263) 0px 0px 30px;
+}
+
+.oneTouchPoint .oneTouchPoint-text span h2{
+    font-size: 2em;
+}
+.oneTouchPoint .oneTouchPoint-img{
+    margin-left: 30px;
+}
+.oneTouchPoint .oneTouchPoint-img img{
+    width:500px;
+}
+
+.container-home-twohunplus{
+    display: flex;
+    align-items: center;
+    width:100%;
+    background: #fff;
+}
+.container-home-twohunplus div{
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+}
+.container-home-twohunplus div img{
+    width:70px;
+    margin:20px;
+    
+}
+#home-service-plus{    
+    -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    justify-content: flex-start;
+    width:40%;
+    background-color: rgb(175, 11, 74);
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    border:none;
+}
+#home-service-plus span{
+    
+    font-size: 1.5em;
+}
+
+/* SERVICES SLIDER CSS */
+.slide-container {
+    max-width: 1120px;
+    width: 100%;
+    /* background: linear-gradient(-30deg, rgb(0, 68, 29),#000); */
+    padding: 40px 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.slide-content {
+    margin: 0 40px;
+    
+}
+
+.card {
+    border-radius: 25px;
+    background-color: #fff;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+}
+
+.image-content,
+.card-content {
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image-content {
+    row-gap: 5px;
+    position: relative;
+    padding: 25px 0;
+}
+
+.overley {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4070f4;
+    border-radius: 25px 25px 0 25px;
+
+}
+
+.overley::before,
+.overley::after {
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 0;
+    bottom: -40px;
+    background-color: #4070f4;
+
+}
+
+.overley::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 3px;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4070f4;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 600;
+    color: #111;
+
+}
+
+.description {
+    font-size: 14px;
+    color: #222;
+    text-align: center;
+}
+
+.button {
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border-radius: 6px;
+    margin: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #265DF2;
+
+}
+.swiper-navBtn{
+    color:#6e93f7;
+    transition: 0.3s ease;
+}
+.swiper-navBtn:hover{
+    color:#4070f4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+
+}
+.swiper-button-next{
+    right:0;
+}
+.swiper-button-prev{
+    left:0;
+}
+.swiper-pagination-bullet{
+    background-color:#6e93f7;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active{
+    background-color:#4070f4;
+    opacity: 1;
+}
+
+
+/* FOOTER CSS */
+
+        .footer{
+            background: #111;
+            color:#999;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .f-about,.f-links,.f-services,.f-address{
+            max-width: 350px;
+            min-width: 150px;     
+            margin-left:10px;
+            margin-right:10px;
+            padding:10px;
+        }
+        .f-about h3,.f-links h3,.f-services h3,.f-address h3{
+            position: relative;
+            display: inline-block;
+            
+        }
+        .f-about h3::before,.f-links h3::before,.f-services h3::before,.f-address h3::before{
+            content:"";
+            position: absolute;
+            height:2px;
+            width:50%;
+            bottom: -3px;
+            background-color: goldenrod;          
+        }
+        
+        .f-services ul li,.f-about ul li,.f-address ul li,.f-links ul li{
+            list-style: none;
+            margin-left: -30px;
+        }
+        ul li a{
+            text-decoration: none;
+            color:#999;
+        }
+        ul li a:hover{
+            text-decoration: none;
+            color:#fff;
+        }
+        .f-address div a{
+            text-decoration: none;
+            color:#999;
+        }
+        .f-address div a:hover{
+            text-decoration: none;
+            color:#fff;
+        }
+        .f-address div p span{
+            margin-right: 10px;
+        }
+        .container .f-social{
+            margin: 10px;
+        }
+        .container .f-social span{
+            margin: 10px;
+        }
+        .container .f-social span a {
+            font-size: 1.3em;
+            padding:10px;
+            transition: 0.5s;
+
+            border-radius: 5px;
+        }
+        .container .f-social span a:hover {
+            background-color: rgba(153, 153, 153, 0.145);
+            transition: 0.5s;
+        }
+        .bi-arrow-right-short{
+            color:#4267B2;
+        }
+        .copyright{
+            margin:10px;
+        }
+
+
+        
