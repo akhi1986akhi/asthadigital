@@ -18,13 +18,35 @@ var swiper = new Swiper(".slide-content", {
     },
     breakpoints:{
       991:{
-        slidesPerView:3,
+        slidesPerView: 3,
       },
       520:{
-        slidesPerView:2,
+        slidesPerView: 2,
+        slidesPerGroup: 2,
       },
       0:{
-        slidesPerView:1,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
       }
     }
   });
+
+
+
+var swiper = new Swiper(".swiper2", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 10,
+    depth: 100,
+    modifier: 2,
+    slideShadows: true,
+  },
+  loop:true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});

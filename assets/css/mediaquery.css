@@ -42,5 +42,13 @@
         width:50px;
         margin:10px;   
     }
+    .card-container{
+        flex-direction: column;
+    }
+    .accept-card-cnt{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+    }
 
 }
