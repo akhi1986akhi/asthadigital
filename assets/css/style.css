@@ -127,7 +127,10 @@
                 rgba(127, 255, 212, 0.363) 0px 0px 15px,
                 rgba(127, 255, 212, 0.263) 0px 0px 30px;
 }
-
+.oneTouchPoint .oneTouchPoint-text span button a{
+    text-decoration: none;
+    color:aquamarine;
+}
 .oneTouchPoint .oneTouchPoint-text span h2{
     font-size: 2em;
 }
@@ -573,6 +576,147 @@
     width:50px;
     height:auto;
 }
+
+/* LATEST JOBS SESCTION CSS */
+.job-sec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 50px;
+}
+.job-sec div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:80%;
+    margin-bottom: 20px;
+}
+.job-sec div .imgbox{
+    height: 100px;
+    /* border: solid 1px pink; */
+    width:120px;
+    margin-left: 100px;
+    justify-content: center;
+}
+.job-sec div .imgbox img{
+    height: 80px;
+    /* border:solid 1px white; */
+    animation: imgani 20s linear infinite;
+}
+@keyframes imgani{
+    0%{
+        transform: translate(0px,0px);
+    }
+    20%{
+        transform: translate(10px,-10px);
+    }
+    40%{
+        transform: translate(0px,-5px);
+    }
+    60%{
+        transform: translate(-10px,-5px);
+    }
+    90%{
+        transform: translate(0px,-5px);
+    }
+    100%{
+        transform: translate(0px,0px);
+    }
+}
+h1{
+    display: flex;
+    color: turquoise;
+    font-size: 3em;
+    align-items: center;
+}
+h1 span{
+    position: relative;
+    display: inline-block;
+    width:20px;
+    height:20px;
+    /* background: rgba(239, 252, 0, 0.768); */
+    margin-right: 10px;
+    border-radius: 4px;
+}
+h1 span::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    background: goldenrod;
+    border-radius: 50%;
+    animation: ani 5s infinite;
+}
+@keyframes ani{
+    0%{
+        transform: scale(0);
+        background: rgba(218, 165, 32, 0.289);
+    }
+    
+}
+
+table{
+    color:rgb(202, 248, 244);
+    line-height: 25px;
+    font-size:1.2em;
+    margin-bottom: 150px;
+}
+thead tr{
+
+    background: linear-gradient(to bottom, rgb(0, 20, 20)10%, rgb(0, 44, 44));
+}
+tr th{
+    padding: 15px 5px;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+    text-align: center;
+}
+tr td{
+    max-width: 300px;
+    padding: 15px 5px;
+}
+tr td:nth-child(3){
+    text-align: center;
+}
+tbody tr{
+    background: rgb(1, 58, 58);
+    transition: 0.5s ease-in;
+}
+table tbody tr:hover{
+    transform: scale(1.1);
+    transition: 0.5s ease-in;
+}
+tbody tr:nth-child(even){
+    background: linear-gradient(to bottom, rgb(0, 20, 20)0%, rgb(0, 44, 44));
+}
+table, th, td {
+    /* border: 1px solid rgba(3, 250, 225, 0.439); */
+    border-top: 1px solid rgba(3, 250, 225, 0.439);
+    border-bottom: 1px solid rgba(3, 250, 225, 0.439);
+    border-collapse: collapse;
+}   
+table,th,td{
+    border-left: none;
+    border-right: none;
+}
+table tr{
+    border-left: solid 1px  rgba(3, 250, 225, 0.439);
+    border-right: solid 1px  rgba(3, 250, 225, 0.439);
+}
+table tbody tr td span{
+    display: block;
+    text-align: center;
+    font-size: 0.8em;
+}
+table tbody tr td .click{
+    color:rgb(0, 136, 255);
+}
+
+
 /* FOOTER CSS */
 
         .footer{

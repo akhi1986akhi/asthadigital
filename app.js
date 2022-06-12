@@ -10,6 +10,9 @@ app.set('view engine', 'ejs');
 app.get('/',function(req,res){
     res.render('pages/index');
 })
+app.get('/latestJob',function(req,res){
+    res.render('pages/latestJob');
+})
 
 app.listen(portname,()=>{
     console.log(`Application started successfully on port ${portname}`);

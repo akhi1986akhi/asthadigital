@@ -17,10 +17,10 @@
         width:300px;
     }
     .oneTouchPoint .oneTouchPoint-text span{
-        font-size: 1em;
+        font-size: 1.5em;
     }
     .oneTouchPoint .oneTouchPoint-text span h2{
-        font-size: 1.5em;
+        font-size: 2em;
     }
 
     .oneTouchPoint .oneTouchPoint-img{
@@ -50,5 +50,64 @@
         grid-template-columns: auto auto;
         justify-content: center;
     }
+    .job-sec div .imgbox{
+        margin-left: 30px;
+    }
+    table{
+        border:none;
+    }
+    .job-sec table thead tr {
+        display: none;
+    }
+    .job-sec table tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        border-bottom: 1px solid rgba(3, 250, 225, 0.439);
+        background: linear-gradient(to bottom, rgb(0, 20, 20)0%, rgb(0, 44, 44));
+    }
+    .job-sec h1{
+            font-size: 2em;
+    }
+    .job-sec table tbody tr td {
+        display: block;
+        max-width: 100%;
+        padding-left: 35%;
+        position: relative;
+        text-align: left;
+        border-bottom: none;
+        font-size: 0.8em;
 
+    }
+    .job-sec table tbody tr td span{
+        text-align: left;
+        display: block;
+        width: 100%;
+    }
+    .job-sec table tbody tr td:before {
+        position: absolute;
+        /* content: ""; */
+        top: 0;
+        left: 0px;
+        width: 32%;
+        height:100%;
+        padding-right: 5px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.032);
+        z-index: +1;
+        padding-left: 20px;
+        font-size: 1.1em;
+        overflow: hidden;
+    }
+    td:nth-of-type(1):before { content: "S.No"; }
+    td:nth-of-type(2):before { content: "Date"; }
+    td:nth-of-type(3):before { content: "Post"; }
+    td:nth-of-type(4):before { content: "Post Name"; }
+    td:nth-of-type(5):before { content: "Title"; }
+    td:nth-of-type(6):before { content: "Date"; }
+    td:nth-of-type(7):before { content: "Fee"; }
+    td:nth-of-type(8):before { content: "View"; }
+    
 }
