@@ -86,7 +86,7 @@
     }
     .job-sec table tbody tr td:before {
         position: absolute;
-        /* content: ""; */
+        content: "";
         top: 0;
         left: 0px;
         width: 32%;
@@ -110,4 +110,12 @@
     td:nth-of-type(7):before { content: "Fee"; }
     td:nth-of-type(8):before { content: "View"; }
     
+    table tbody tr td .click{
+        color:rgb(0, 136, 255);
+        font-size: 1.5em;
+    }
+    table tbody tr:hover{
+        transform: scale(1);
+        transition: 0.5s ease-in;
+    }   
 }

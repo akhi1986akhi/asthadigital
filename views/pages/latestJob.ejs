@@ -28,47 +28,26 @@
                         <th><span class="click"><i class="bi bi-globe"></i></span></th>
                     </tr>
                 </thead>
+                <% if(records.length> 0){ let i=1 %>
+                    <% records.forEach(function(row){ %>
+  
                 <tbody>
                     <tr>
-                        <td>01</td>
-                        <td style="font-size: 0.8em;">09 June 2022</td>
-                        <td>43</td>
-                        <td>Inspector, Principal, Medical Officer and Other Post</td>
-                        <td>UPPSC Various Post Direct Recruitment Online Form 2022</td>
-                        <td><span>09.06.2022</span><span>-</span><span style="color: orange;">25.06.2022</span></td>
-                        <td><span>Gen-500 &#8377;</span><span>OBC-500 &#8377;</span><span>SC/ST-100 &#8377;</span></td>
+                        <td style="padding-left: 15px;"><%= i %></td>
+                        <td style="font-size: 0.8em;"><%= row.date %></td>
+                        <td><%= row.post %></td>
+                        <td><%= row.postname %></td>
+                        <td><%= row.title %></td>
+                        <td><span><%= row.fdate %></span><span>-</span><span style="color: orange;"><%= row.tdate %></span></td>
+                        <td><span class="fee">Gen - <%= row.gfee %> &#8377;</span><span class="fee">OBC - <%= row.ofee %> &#8377;</span><span class="fee">SC - <%= row.scfee %> &#8377;</span><span class="fee">ST - <%= row.stfee %> &#8377;</span><span class="fee">PH - <%= row.pfee %> &#8377;</span><span class="fee">EWS - <%= row.efee %> &#8377;</span></td>
                         <td><span class="click"><i class="bi bi-hand-index-thumb"></i></span></td>
                     </tr>
-                    <tr>
-                        <td>02</td>
-                        <td style="font-size: 0.8em;">09 June 2022</td>
-                        <td>43</td>
-                        <td>Inspector, Principal, Medical Officer and Other Post</td>
-                        <td>UPPSC Various Post Direct Recruitment Online Form 2022</td>
-                        <td><span>09.06.2022</span><span>-</span><span style="color: orange;">25.06.2022</span></td>
-                        <td><span>Gen-500 &#8377;</span><span>OBC-500 &#8377;</span><span>SC/ST-100 &#8377;</span></td>
-                        <td><span class="click"><i class="bi bi-hand-index-thumb"></i></span></td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td style="font-size: 0.8em;">09 June 2022</td>
-                        <td>43</td>
-                        <td>Inspector, Principal, Medical Officer and Other Post</td>
-                        <td>UPPSC Various Post Direct Recruitment Online Form 2022</td>
-                        <td><span>09.06.2022</span><span>-</span><span style="color: orange;">25.06.2022</span></td>
-                        <td><span>Gen-500 &#8377;</span><span>OBC-500 &#8377;</span><span>SC/ST-100 &#8377;</span></td>
-                        <td><span class="click"><i class="bi bi-hand-index-thumb"></i></span></td>
-                    </tr>
-                    <tr>
-                        <td>04</td>
-                        <td style="font-size: 0.8em;">09 June 2022</td>
-                        <td>43</td>
-                        <td>Inspector, Principal, Medical Officer and Other Post</td>
-                        <td>UPPSC Various Post Direct Recruitment Online Form 2022</td>
-                        <td><span>09.06.2022</span><span>-</span><span style="color: orange;">25.06.2022</span></td>
-                        <td><span>Gen-500 &#8377;</span><span>OBC-500 &#8377;</span><span>SC/ST-100 &#8377;</span></td>
-                        <td><span class="click"><i class="bi bi-hand-index-thumb"></i></span></td>
-                    </tr>
+                    <% i=i+1; }) %>
+                        <% }else{ %>
+                          <tr>
+                            <td colspan="5">No records found</td>
+                          </tr>
+                          <% } %>
                 </tbody>
             </table>
         </section>

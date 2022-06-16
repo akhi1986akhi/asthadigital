@@ -625,13 +625,13 @@
         transform: translate(0px,0px);
     }
 }
-h1{
+.job-sec div h1{
     display: flex;
     color: turquoise;
     font-size: 3em;
     align-items: center;
 }
-h1 span{
+.job-sec div h1 span{
     position: relative;
     display: inline-block;
     width:20px;
@@ -640,7 +640,7 @@ h1 span{
     margin-right: 10px;
     border-radius: 4px;
 }
-h1 span::before{
+.job-sec div h1 span::before{
     position: absolute;
     content: "";
     width: 100%;
@@ -668,6 +668,7 @@ table{
 thead tr{
 
     background: linear-gradient(to bottom, rgb(0, 20, 20)10%, rgb(0, 44, 44));
+    
 }
 tr th{
     padding: 15px 5px;
@@ -678,26 +679,32 @@ tr th{
 tr td{
     max-width: 300px;
     padding: 15px 5px;
+    
 }
 tr td:nth-child(3){
     text-align: center;
+
 }
 tbody tr{
-    background: rgb(1, 58, 58);
+    background: rgb(1, 50, 50);
     transition: 0.5s ease-in;
+    vertical-align: top;
+}
+table tbody tr:nth-child(3){
+    /* background: linear-gradient(to bottom, rgb(0, 20, 20)0%, rgb(0, 44, 44)); */
+    background-color: yellow;
 }
 table tbody tr:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.5s ease-in;
 }
-tbody tr:nth-child(even){
-    background: linear-gradient(to bottom, rgb(0, 20, 20)0%, rgb(0, 44, 44));
-}
+
 table, th, td {
-    /* border: 1px solid rgba(3, 250, 225, 0.439); */
+    border: 1px solid rgba(3, 250, 225, 0.439);
     border-top: 1px solid rgba(3, 250, 225, 0.439);
     border-bottom: 1px solid rgba(3, 250, 225, 0.439);
     border-collapse: collapse;
+    
 }   
 table,th,td{
     border-left: none;
@@ -715,7 +722,11 @@ table tbody tr td span{
 table tbody tr td .click{
     color:rgb(0, 136, 255);
 }
-
+.fee{
+    display: block;
+    text-align: right;
+    line-height: 17px;
+}
 
 /* FOOTER CSS */
 
