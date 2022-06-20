@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body style="background-color: #003147;">
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="content">
+                <h2>Job Form</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quidem beatae placeat distinctio ratione non ab, obcaecati doloremque reprehenderit molestiae veniam deleniti harum cumque sapiente, nesciunt necessitatibus enim, recusandae exercitationem rerum odio vel quae sit architecto perspiciatis. Itaque, nihil aut?</p>
+            </div>
+            <div class="container-contact">
+                <!-- <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon"><i class="bi bi-geo-alt"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Lorem ipsum, dolor<br/> sit amet consectetur adipisicing elit.</br> Dicta, facere.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="bi bi-telephone"></i></div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>+91 9026297134 <br> +91 9936762093
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="bi bi-envelope-open"></i></div>
+                        <div class="text">
+                            <h3>E-mail</h3>
+                            <p>brikum1994@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="bi bi-globe"></i></i></div>
+                        <div class="text">
+                            <h3>Visit</h3>
+                            <p>www.asthadigital.co.in <br>www.asthadigital.online
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="contactForm">
+                    <form action="/latestJobForm" method="post">
+                        <!-- <h2>Form</h2> -->
+                        <div class="formRow">
+
+                            <div class="inputBox">
+                                <input type="text" name="date" required="required">
+                                <span>Form Date</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="fdate" required="required">
+                                <span>Start Date</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="tdate" required="required">
+                                <span>Last Date</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="post" required="required">
+                                <span> No. of Post</span>
+                            </div>
+                        </div>
+
+                        <div class="inputBox">
+                            <input type="text" name="postname" required="required">
+                            <span>Post Name</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="text" name="title" required="required">
+                            <span>Title</span>
+                        </div>
+                        <div class="formRow">
+                            <div class="inputBox">
+                                <input type="text" name="gfee" required="required">
+                                <span>Fee-Gen</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="ofee" required="required">
+                                <span>Fee-OBC</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="scfee" required="required">
+                                <span>Fee-SC</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="stfee" required="required">
+                                <span>Fee-ST</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="pfee" required="required">
+                                <span>Fee-PH</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="efee" required="required">
+                                <span>Fee-EWS</span>
+                            </div>
+                        </div>                    
+                        <div class="inputBox">
+                            <input type="submit" name="" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <%- include('../partials/footer'); %>
+    </footer>
+    <!-- slide swiper javascript -->
+    <script src="../../assets/js/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/javaScript.js"></script>
+</body>
+
+</html>

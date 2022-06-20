@@ -117,5 +117,17 @@
     table tbody tr:hover{
         transform: scale(1);
         transition: 0.5s ease-in;
-    }   
+    }
+    
+    /* contact form */
+    .contact{
+        padding:50px;
+    }
+    .container-contact{
+        flex-direction: column;
+    }
+    .container-contact .contactInfo, .contactForm{
+        margin-bottom: 40px;
+        width: 100%;
+    }
 }
