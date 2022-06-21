@@ -103,6 +103,7 @@
 				user[value.name] = value.value;
 			});
 			let url = "http://localhost:3000/contact";
+            // let url = "http://asthadigital.online/contact";
 			$.ajax({
 				method: "POST",
 				url: url,
@@ -111,10 +112,10 @@
 				
 				// When the request is successful
 				$('#msg-sus').text('Message Sent Successfully!');
-                $(".inputfield").val(" ");
-                $("textarea").val(" ");
+                $(".inputfield").val("");
+                $("textarea").val("");
 			}).fail(function(err, textstatus, error) {
-				$('#msg-sus').text(textstatus);
+				$('#msg-sus').text(textstatus + "message not sent");
 			});
 		});
 	});

@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const path = require('path');
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv') // .env file
+dotenv.config() // using .env
 const portname = process.env.PORT || 3000;
 mongoose.connect('mongodb+srv://akhi1986akhi:5ZT2CNDB7K3mPjwY@cluster0.wucuh.mongodb.net/mydb?retryWrites=true&w=majority', {
     useNewUrlParser: true,
@@ -20,7 +22,7 @@ app.get('/', function (req, res) {
     res.render('pages/index');
 })
 app.get('/latestJob', function (req, res) {
-    jobs.find({}).then((data) => {
+    jobs.find({}).sort({$natural:-1}).then((data) => {
         res.render('pages/latestJob', { records: data });
     })
 })
@@ -68,7 +70,8 @@ app.post('/contact', jsonParser, (req, res) => {
         requireTLS: true,
         auth: {
             user: 'info@asthadigital.co.in',
-            pass: 'King$420king'
+            // pass: 'King$420king'
+            pass:process.env.PASS
         }
     });
     var mailOptions = {
