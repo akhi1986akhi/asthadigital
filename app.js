@@ -70,7 +70,6 @@ app.post('/contact', jsonParser, (req, res) => {
         requireTLS: true,
         auth: {
             user: 'info@asthadigital.co.in',
-            // pass: 'King$420king'
             pass:process.env.PASS
         }
     });
