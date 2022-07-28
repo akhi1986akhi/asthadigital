@@ -52,6 +52,22 @@ app.post('/latestJobForm', jsonParser, function (req, res) {
     })
 
 })
+app.get('/pricing', (req, res) => {
+    res.render('pages/pricing');
+});
+app.get('/services', (req, res) => {
+    res.render('pages/services');
+})
+app.get('/services/eforms', (req, res) => {
+    res.render('pages/services/eforms');
+})
+app.get('/services/itr', (req, res) => {
+    res.render('pages/services/itr');
+})
+app.get('/services/withdrawl', (req, res) => {
+    res.render('pages/services/withdrawl');
+})
+
 app.get('/contact', (req, res) => {
     res.render('pages/contact');
 })

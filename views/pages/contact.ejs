@@ -10,10 +10,17 @@
         <%- include('../partials/header'); %>
     </header>
     <main>
-        <section class="contact">
+        <nav aria-label="breadcrumb" style="margin-bottom:0;padding-bottom:0">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+          </nav>
+        <section class="contact" style="margin-bottom:0;padding-bottom:0">
             <div class="content">
                 <h2>Contact Us</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias quidem beatae placeat distinctio ratione non ab, obcaecati doloremque reprehenderit molestiae veniam deleniti harum cumque sapiente, nesciunt necessitatibus enim, recusandae exercitationem rerum odio vel quae sit architecto perspiciatis. Itaque, nihil aut?</p>
+                <p>Please fill up the form given below to connect with us. It will be routed to
+                    person best able to provide you assistant. A <strong style="color:#fff;">Astha Digital</strong> representative will
+                    contact you shortly.</p>
             </div>
             <div class="container-contact">
                 <div class="contactInfo">
@@ -21,7 +28,7 @@
                         <div class="icon"><i class="bi bi-geo-alt"></i></div>
                         <div class="text">
                             <h3>Address</h3>
-                            <p>Lorem ipsum, dolor<br/> sit amet consectetur adipisicing elit.</br> Dicta, facere.
+                            <p>Gauhniya, Jasra,<br /> Prayagraj, Uttar Pradesh <br />INDIA - 212107
                             </p>
                         </div>
                     </div>
@@ -29,7 +36,7 @@
                         <div class="icon"><i class="bi bi-telephone"></i></div>
                         <div class="text">
                             <h3>Phone</h3>
-                            <p>+91 9026297134 <br> +91 9936762093
+                            <p><a href="tel:919026297134>">+91 9026297134</a> <br> <a href="tel:919936762093">+91 9936762093</a>
                             </p>
                         </div>
                     </div>
@@ -37,7 +44,7 @@
                         <div class="icon"><i class="bi bi-envelope-open"></i></div>
                         <div class="text">
                             <h3>E-mail</h3>
-                            <p>brikum1994@gmail.com
+                            <p><a href="mailto:info@asthadigital.co.in">info@asthadigital.co.in</a><br><a href="mailto:brikum1994@gmail.com">brikum1994@gmail.com</a>
                             </p>
                         </div>
                     </div>
@@ -50,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="contactForm">
+                <div class="contactForm" id="contact-frm">
                     <span id="msg-sus" class="msg-success"></span>
                     <!-- <form action="/contact" method="post"> -->
                         <form>
@@ -72,7 +79,7 @@
                             <span>Type your Message...</span>
                         </div>
                         <div class="inputBox">
-                            <input type="submit" name="" value="Submit">
+                            <input type="submit" id="frm-sub-btn" name="" value="Submit">
                         </div>
                     </form>
                 </div>
@@ -93,7 +100,7 @@
 	$(document).ready(function() {
 		$('form').on('submit', function(event) {
 			event.preventDefault();
-			
+            $("#contact-frm").addClass("show");
 			// It returns a array of object
 			let userinfo = $(this).serializeArray();
 			let user = {};
@@ -102,7 +109,7 @@
 				// Dynamically create an object
 				user[value.name] = value.value;
 			});
-			//let url = "http://localhost:3000/contact";
+			//  let url = "http://localhost:3000/contact";
              let url = "http://asthadigital.online/contact";
 			$.ajax({
 				method: "POST",
@@ -112,6 +119,8 @@
 				
 				// When the request is successful
 				$('#msg-sus').text('Message Sent Successfully!');
+                $("#contact-frm").removeClass("show");
+                // $("#contact-frm").addClass("hide");
                 $(".inputfield").val("");
                 $("textarea").val("");
 			}).fail(function(err, textstatus, error) {
@@ -119,6 +128,12 @@
 			});
 		});
 	});
+
+    
+
+    $("body").click(function(){
+        $("#msg-sus").text("");
+    })
 	</script>
 </body>
 

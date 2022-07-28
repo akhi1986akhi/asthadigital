@@ -101,14 +101,14 @@
         font-size: 1.1em;
         overflow: hidden;
     }
-    td:nth-of-type(1):before { content: "S.No"; }
-    td:nth-of-type(2):before { content: "Date"; }
-    td:nth-of-type(3):before { content: "Post"; }
-    td:nth-of-type(4):before { content: "Post Name"; }
-    td:nth-of-type(5):before { content: "Title"; }
-    td:nth-of-type(6):before { content: "Date"; }
-    td:nth-of-type(7):before { content: "Fee"; }
-    td:nth-of-type(8):before { content: "View"; }
+    .job-sec table tbody tr td:nth-of-type(1):before { content: "S.No"; }
+    .job-sec table tbody tr td:nth-of-type(2):before { content: "Date"; }
+    .job-sec table tbody tr td:nth-of-type(3):before { content: "Post"; }
+    .job-sec table tbody tr td:nth-of-type(4):before { content: "Post Name"; }
+    .job-sec table tbody tr td:nth-of-type(5):before { content: "Title"; }
+    .job-sec table tbody tr td:nth-of-type(6):before { content: "Date"; }
+    .job-sec table tbody tr td:nth-of-type(7):before { content: "Fee"; }
+    .job-sec table tbody tr td:nth-of-type(8):before { content: "View"; }
     
     table tbody tr td .click{
         color:rgb(0, 136, 255);
@@ -129,5 +129,31 @@
     .container-contact .contactInfo, .contactForm{
         margin-bottom: 40px;
         width: 100%;
+    }
+    .pricing-card-cont{
+        flex-direction: column;
+    }
+    /* nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:solid 1px #fff;
+
+    } */
+    nav .logo{
+        margin-left: 5px;
+    }
+    nav .logo img{
+        width:30px;
+    }
+    header nav ul{
+        display: flex;
+        padding-left: 5px;
+        height: 100%;
+    }
+    header nav ul li {
+        /* margin-right: 5px; */
+        /* padding-left: -20px; */
+        margin-left: -5px;
     }
 }
